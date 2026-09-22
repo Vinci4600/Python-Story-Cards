@@ -1,4 +1,5 @@
-#Bild
+import textwrap
+
 print(r'''           /---\
                     /     \
                    |  ## ##|
@@ -38,9 +39,13 @@ print(r'''           /---\
  |___/     |  |__||||||__|  |     \___|
            o                o
 _______________________________________''')
-print("Wilkommen beim Spiel Spuck im Schloss ")
-#Vorspann
-print('''"Wie alles begann …" Eigentlich wollten wir, Justus, Peter und Bob, den Tag am Strand verbringen, aber es kam alles anders. Wir trafen uns in unserem Geheimversteck, der Kaffeekanne. Und dort machte Bob eine Entdeckung: Jemand hatte an der Einstiegsklappe des stillgelegten Wassertanks eine gruselige Botschaft hinterlassen. Auf einem Zettel war mit blutroter Schrift geschrieben: "Hilfe! Ich bin gefangen. Gefangen im alten Schloss. Bitte helft mir!" Klar, dass wir uns sofort auf den Weg machten, 
+
+print("\n" + "=" * 55)
+print("              SPUK IM SCHLOSS")
+print("=" * 55 + "\n")
+
+# Vorspann
+vorspann = '''Wie alles begann …" Eigentlich wollten wir, Justus, Peter und Bob, den Tag am Strand verbringen, aber es kam alles anders. Wir trafen uns in unserem Geheimversteck, der Kaffeekanne. Und dort machte Bob eine Entdeckung: Jemand hatte an der Einstiegsklappe des stillgelegten Wassertanks eine gruselige Botschaft hinterlassen. Auf einem Zettel war mit blutroter Schrift geschrieben: "Hilfe! Ich bin gefangen. Gefangen im alten Schloss. Bitte helft mir!" Klar, dass wir uns sofort auf den Weg machten, 
 denn Detektive helfen, wo sie können.
 Schließlich sind wir die drei ???.
 Wir kannten das alte Schloss. Vor vielen
@@ -83,4 +88,15 @@ Gefahren trotzen, die hier lauerten, denn
 echte Detektive kennen keine Angst!
 Wir begannen, uns umzusehen, obwohl Peter
 schon am ganzen Leib zitterte. Langsam
-konnten wir erkennen, wo wir uns befanden … ''')
+konnten wir erkennen, wo wir uns befanden …'''
+
+print(textwrap.fill(
+    vorspann,
+    width=70,
+    initial_indent="    ",
+    subsequent_indent="    "
+))
+
+print("\n" + "-" * 55)
+print("                    BEGINN")
+print("-" * 55)
