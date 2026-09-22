@@ -1,4 +1,5 @@
 import textwrap
+import random
 
 print(r'''           /---\
                     /     \
@@ -89,7 +90,7 @@ echte Detektive kennen keine Angst!
 Wir begannen, uns umzusehen, obwohl Peter
 schon am ganzen Leib zitterte. Langsam
 konnten wir erkennen, wo wir uns befanden …'''
-
+#Style für den Vorspann
 print(textwrap.fill(
     vorspann,
     width=70,
@@ -100,3 +101,56 @@ print(textwrap.fill(
 print("\n" + "-" * 55)
 print("                    BEGINN")
 print("-" * 55)
+
+#Punkte
+score = 0
+
+#Karten Anfangs Liste
+blackcards = [1,2]
+
+#Zufalls anfangs Karte
+random_first_card = random.choice(blackcards)
+
+#if abfragen
+
+if random_first_card == 1:
+    score += 1
+
+    choice1 = int(input(
+        'Wir stehen in der Eingangshalle des Geisterschlosses und Peter hält sich die Nase zu. '
+        'Puh, stinkt das! Hier war hundert Jahre kein Mensch mehr. '
+        'Justus knetet seine Unterlippe. Menschen vielleicht nicht, aber Geister? '
+        'In dem großen Kamin züngelt plötzlich eine bläuliche Flamme in die Höhe. '
+        '"Weisse 1: Wir holen tief Luft und sehen uns vorsichtig um..." '
+        'oder '
+        '"Blaue 10: Uns wird fast übel von dem Geruch. Wir löschen die Flamme." '
+    ))
+
+    if choice1 == 1:
+        score += 5
+        choice1_1 = input('#')
+
+    else:
+        score += 1
+        choice1_10 = input('#')
+
+
+
+
+
+
+else :
+    score += 1
+    choice2 = int(input('Wir befinden uns in einem dunklen Kellergewölbe. Es ist kalt und feucht.'
+                        ' Wasser tropft von der Decke. Hallo ist hier Jemand? ruft Justus.'
+                        ' In der Ferne leuchten winzige Lichter auf. Sind das etwa Augen? flüsterte Peter'
+                        '"Auswahl:"'
+                        '"weisse 12: Uns ist ganz unheimlich wir schleichen uns davon."'
+                        '"weisse 5: Wir überwinden unsere Angst und bewegen uns auf die Augen zu.'
+                        ))
+    if choice2 == 12:
+        score += 1
+        choice2_12 = input('#')
+    else:
+        score += 1
+        choice2_5 = input('#')
