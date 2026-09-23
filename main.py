@@ -1,6 +1,6 @@
 #Main Seite mit Wilkommen
 from random import choice
-import Spuk_im_Schloss
+import spuk_im_schloss
 
 print(r'''_____
          |A .  | _____
@@ -13,10 +13,13 @@ print(r'''_____
                               |____V|
 ''')
 print("Wilkommen bei StoryCards" )
-storycards = input('Welches Spiel möchten Sie spielen? "1. Spuk im Schloss"oder"2. Das Verschollene Diadem"')
+storycards = input('Welches Spiel möchten Sie spielen? "1. Spuk im Schloss" oder "2. Das Verschollene Diadem": ')
+
 if storycards == "1":
-    print("Wilkommen beim Spiel Spuck im Schloss ")
-    Spuk_im_Schloss.start()
-else :
-    print("Wilkommen im Spiel das Verschollene Diadem ")
+    print("Willkommen beim Spiel Spuk im Schloss")
+    spuk_im_schloss.start()
+elif storycards == "2":
+    print("Willkommen beim Spiel Das Verschollene Diadem")
+else:
+    print("Ungültige Eingabe! Bitte wähle 1 oder 2.")
 
