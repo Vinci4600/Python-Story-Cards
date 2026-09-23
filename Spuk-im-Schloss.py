@@ -1,6 +1,7 @@
 import textwrap
 import random
 
+
 print(r'''           /---\
                     /     \
                    |  ## ##|
@@ -112,11 +113,11 @@ blackcards = [1,2]
 random_first_card = random.choice(blackcards)
 
 #if abfragen
-
+# wenn die Erste Karte 1 ist
 if random_first_card == 1:
     score += 1
-
-    choice1 = int(input(
+#Text Block 1 Blackcard 1
+    blackcard_1 = """
         'Wir stehen in der Eingangshalle des Geisterschlosses und Peter hält sich die Nase zu. '
         'Puh, stinkt das! Hier war hundert Jahre kein Mensch mehr. '
         'Justus knetet seine Unterlippe. Menschen vielleicht nicht, aber Geister? '
@@ -124,8 +125,13 @@ if random_first_card == 1:
         '"Weisse 1: Wir holen tief Luft und sehen uns vorsichtig um..." '
         'oder '
         '"Blaue 10: Uns wird fast übel von dem Geruch. Wir löschen die Flamme." '
-    ))
-
+    """
+#Choice 1 = Die erste Karte mit dem Erstenblock
+choice1 = int(input(blackcard_1))
+#Schleife zur überprüfung das nur die Zahl die zur option stehen akzeptiert werden
+while not 1 <= choice1 <= 10:
+    choice = int(input("Zahl muss zwischen 1 oder 10 sein."))
+    #Erster Entscheidung Block wenn 1 dann oder wenn 10 dann und Sonst = (Ungültigeeingabe)
     if choice1 == 1:
         score += 5
         choice1_1 = int(input('#'))
@@ -139,9 +145,8 @@ if random_first_card == 1:
 
 
 
-
-
-else :
+# Wenn die Black card 2 Aus dem Stapel als antwort kommt
+if random_first_card == 2:
     score += 1
     choice2 = int(input('Wir befinden uns in einem dunklen Kellergewölbe. Es ist kalt und feucht.'
                         ' Wasser tropft von der Decke. Hallo ist hier Jemand? ruft Justus.'
@@ -150,6 +155,7 @@ else :
                         '"weisse 12: Uns ist ganz unheimlich wir schleichen uns davon."'
                         '"weisse 5: Wir überwinden unsere Angst und bewegen uns auf die Augen zu.'
                         ))
+    #Erste Auswahls möglichkeiten BlackCard2
     if choice2 == 12:
         score += 1
         choice2_12 = input('#')
