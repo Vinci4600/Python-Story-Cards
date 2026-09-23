@@ -128,11 +128,13 @@ if random_first_card == 1:
 
     if choice1 == 1:
         score += 5
-        choice1_1 = input('#')
+        choice1_1 = int(input('#'))
 
-    else:
+    elif choice1 == 10:
         score += 1
         choice1_10 = input('#')
+    else:
+        print('Error "Bitte Geben sie eine Gültige Zahl ein"')
 
 
 
@@ -151,6 +153,8 @@ else :
     if choice2 == 12:
         score += 1
         choice2_12 = input('#')
-    else:
+    elif choice2 == 5:
         score += 1
         choice2_5 = input('#')
+    else:
+        print('Error "Bitte Geben sie eine Gültige Zahl ein"')
